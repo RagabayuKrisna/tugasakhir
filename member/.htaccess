@@ -1,0 +1,20 @@
+<Ifmodule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    
+    RewriteRule ^beranda/?$ index.php [L]
+    RewriteRule ^paket/?$ index.php?page=paket [L]
+    RewriteRule ^keranjang/?$ keranjang.php [L]
+    RewriteRule ^keranjang/([A-Za-z0-9-]+)/?$ keranjang.php?id_keranjang=$1 [L]
+    RewriteRule ^detailitem/?$ index.php?page=detailitem [L]
+    RewriteRule ^detailitem/([A-Za-z0-9-]+)/?$ detailitem.php?id_item=$1 [L]
+    RewriteRule ^tambahan/?$ index.php?page=tambahan [L]
+    RewriteRule ^tersedia/?$ index.php?page=tersedia.php [L]
+    RewriteRule ^profil/?$ index.php?page=profil [L]
+    RewriteRule ^galeri/?$ index.php?page=galeri [L]
+    RewriteRule ^boking/?$ index.php?page=boking [L]
+    
+    RewriteRule ^edituser/?$ index.php?page=edituser [L]
+    Options All -Indexes
+</Ifmodule>

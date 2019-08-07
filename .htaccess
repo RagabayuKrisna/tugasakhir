@@ -1,0 +1,9 @@
+<Ifmodule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php
+    RewriteRule ^beranda/?$ index.php [L]
+    RewriteRule ^paket/?$ index.php?page=paket [L]
+    Options All -Indexes
+</Ifmodule>
